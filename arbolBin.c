@@ -166,3 +166,41 @@ int cantNiveles(nodoArbol * A){
 
     return niveles;
 }
+
+
+int cantidadHojas(nodoArbol * A)
+{
+    int i = 0;
+    if (A != NULL)
+    {
+        if (A->d == NULL && A->i == NULL)
+        {
+            i++;
+        }
+        else
+        {
+            i = i + cantidadHojas(A->i);
+            i = i + cantidadHojas(A->d);
+        } 
+    }
+    return i;
+}
+
+
+
+
+int cantidadNodos(nodoArbol * A)
+{
+    int i = 0;
+    if (A != NULL)
+    {
+        i = 0;
+    }
+    else
+    {
+        i++;
+        i = i + cantidadHojas(A->i);
+        i = i + cantidadHojas(A->d);
+    }
+    return i;
+}
