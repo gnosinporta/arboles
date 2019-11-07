@@ -36,8 +36,8 @@ nodoArbol * borrar(nodoArbol * A, int dato);
 nodoArbol * NMD(nodoArbol * A);
 nodoArbol * NMI(nodoArbol * A);
 int cantNiveles(nodoArbol * A);
-int cantidadHojas(nodoArbol * A);
-int cantidadNodos(nodoArbol * A);
+int cantHojas(nodoArbol * A);
+int cantNodos(nodoArbol * A);
 
 
 
