@@ -60,7 +60,7 @@ nodoArbol * buscar(nodoArbol * A, int dato){
 void preorden(nodoArbol * A){
     if(A != NULL)
     {
-        printf("%d", A->dato);
+        printf("%d ", A->dato);
         preorden(A->i);
         preorden(A->d);
     }
@@ -73,7 +73,7 @@ void inorden(nodoArbol * A){
     if(A != NULL)
     {
         inorden(A->i);
-        printf("%d", A->dato);
+        printf("%d ", A->dato);
         inorden(A->d);
     }
 }
@@ -85,7 +85,7 @@ void postorden(nodoArbol * A){
     {
         postorden(A->i);
         postorden(A->d);
-        printf("%d", A->dato);
+        printf("%d ", A->dato);
     }
 }
 
@@ -168,7 +168,7 @@ int cantNiveles(nodoArbol * A){
 }
 
 
-int cantidadHojas(nodoArbol * A)
+int cantHojas(nodoArbol * A)
 {
     int i = 0;
     if (A != NULL)
@@ -179,8 +179,8 @@ int cantidadHojas(nodoArbol * A)
         }
         else
         {
-            i = i + cantidadHojas(A->i);
-            i = i + cantidadHojas(A->d);
+            i = i + cantHojas(A->i);
+            i = i + cantHojas(A->d);
         } 
     }
     return i;
@@ -189,18 +189,18 @@ int cantidadHojas(nodoArbol * A)
 
 
 
-int cantidadNodos(nodoArbol * A)
+int cantNodos(nodoArbol * A)
 {
     int i = 0;
-    if (A != NULL)
+    if (A == NULL)
     {
         i = 0;
     }
     else
     {
         i++;
-        i = i + cantidadHojas(A->i);
-        i = i + cantidadHojas(A->d);
+        i = i + cantHojas(A->i);
+        i = i + cantHojas(A->d);
     }
     return i;
 }
