@@ -64,17 +64,5 @@ int main()
     inorden(arbol); printf("\n");
 */
 
-
-
-
-    /*printf("creacion de un nodo\n");
-    printf("\n");
-    printf("\n");
-    printf("\n");
-    printf("\n");
-    printf("\n");
-    printf("\n");
-    printf("\n");
-    printf("\n");*/
     return 0;
 }
